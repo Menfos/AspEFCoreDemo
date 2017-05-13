@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("AssignCache", "Home", FormMethod.Post))
+{
+    <p>@Html.Label("cacheValueName", "Set name")</p>
+    <p>@Html.TextBox("cacheValueName")</p>
+    <p>@Html.Label("cacheValue", "Set value")</p>
+    <p>@Html.TextBox("cacheValue")</p>
+    <p><input type="submit" value="Set" /></p>
+
+
+}
+
+@using (Html.BeginForm("GetCache", "Home", FormMethod.Post))
+{
+    <p>@Html.Label("cacheValueName", "Set name")</p>
+    <p>@Html.TextBox("cacheValueName")</p>
+    <p><input type="submit" value="Get" /></p>
+}
+
